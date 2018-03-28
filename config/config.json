@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Test123!",
-    "database": "puppies",
+    "password": "theworld1",
+    "database": "puppies_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
