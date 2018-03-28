@@ -1,8 +1,35 @@
-// TODO use any columns we have in the db to set up the puppies model
-
 module.exports = function(sequelize, DataTypes) {
-    puppies = sequelize.define("puppies", {
-    // Insert model data here
+    let postPuppies = sequelize.define("puppies", {
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      gender: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+      },
+      breed: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      info: {
+        type: DataTypes.TEXT,
+        allowNull: true
+      },
+      image: {
+        type: DataTypes.TEXT,
+        allowNull: true
+      }
     });
-    return puppies;
+    return postPuppies;
   };
