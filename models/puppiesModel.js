@@ -1,7 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
-    let puppies = sequelize.define("puppies", {
+    let Puppies = sequelize.define("puppies", { 
       name: {
         type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      breed: {
+        type: DataTypes.TEXT,
         allowNull: false,
         validate: {
           len: [1]
@@ -11,13 +18,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BOOLEAN,
         allowNull: false
       },
-      breed: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
+      
       age: {
         type: DataTypes.INTEGER,
         allowNull: false
@@ -30,6 +31,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.TEXT,
         allowNull: true
       }
+    }, {
+      timestamps: false
     });
-    return puppies;
-  };
+    return Puppies;
+};
