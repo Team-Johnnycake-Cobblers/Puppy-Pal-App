@@ -12,4 +12,3 @@ CREATE TABLE puppies
     image varchar(300) NOT NULL,
 	PRIMARY KEY (id)
 );
-

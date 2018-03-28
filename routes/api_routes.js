@@ -1,15 +1,14 @@
-// TODO test functionality
 
-// var apiController = require("../controllers/api_controller.js");
+const apiController = require("../controllers/api_controller");
 
-// module.exports = function(app) {
-//   app.get("/api/puppies/", apiController.findAllPuppies); 
+module.exports = function(app) {
+  app.get("/api/puppies", apiController.findAllPuppies); 
 
-//   app.get("/api/puppies/:id", apiController.findOnePuppy);
+  app.get("/api/puppies/:id", apiController.findOnePuppy);
 
-//   app.post("api/puppies", apiController.postPuppy); 
+  app.post("/api/puppies", apiController.postPuppy); 
 
-//   app.put("/api/puppies", apiController.changePuppy);
+  app.put("/api/puppies", apiController.changePuppy);
 
-//   app.delete("api/puppies/:id", apiController.deletePuppy); 
-// };
+  app.delete("api/puppies/:id", apiController.deletePuppy); 
+};

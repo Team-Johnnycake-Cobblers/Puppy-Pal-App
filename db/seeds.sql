@@ -4,3 +4,4 @@ INSERT INTO puppies (name, breed, gender, age, info, image) VALUES ('Riley', 'Ge
 INSERT INTO puppies (name, breed, gender, age, image) VALUES ('Max', 'Golden Retriever','Male', 3, "https://i.imgur.com/uGeZAOe_d.jpg?maxwidth=520&shape=thumb&fidelity=high");
 INSERT INTO puppies (name, breed, gender, age, info, image) VALUES ('Ruby', 'Chow Chow', 'Female', 1, 'sheds frequently', 'https://i.imgur.com/G49rAb.jpg');
 INSERT INTO puppies (name, breed, gender, age, info, image) VALUES ('Lola', 'Shih Tzu', 'Female', 3, 'very playful', 'https://i.imgur.com/UK2S823b.jpg');
+
