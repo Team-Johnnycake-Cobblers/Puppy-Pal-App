@@ -1,1 +1,33 @@
-<h1>Puppies test</h1>
+<div class="uk-container uk-container-large">
+    <header>
+        <img src="img/banner-image.png">
+    </header>
+
+    <div uk-lightbox>
+        <div uk-lightbox>
+            <a class="uk-button uk-button-default uk-position-bottom-center" href="../docs/images/photo.jpg">Begin Search</a>
+
+
+            <div class="uk-h3">
+                <div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: slide">
+                    <div>
+                        <a class="uk-inline" href="../docs/images/photo.jpg" 
+                        caption={{puppies.name}}
+                            <img src="../docs/images/photo.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="../docs/images/dark.jpg" caption="Caption 2">
+                            <img src="../docs/images/dark.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="../docs/images/light.jpg" caption="Caption 3">
+                            <img src="../docs/images/light.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
