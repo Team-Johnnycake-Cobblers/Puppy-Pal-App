@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    let postPuppies = sequelize.define("puppies", {
+    let puppies = sequelize.define("puppies", {
       name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -31,5 +31,5 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       }
     });
-    return postPuppies;
+    return puppies;
   };
