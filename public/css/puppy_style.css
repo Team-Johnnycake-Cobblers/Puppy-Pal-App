@@ -1,11 +1,34 @@
 .uk-heading-hero {
     text-align: center;
     border-bottom: 10px;
-
     visibility: visible;
     font-family: 'Yellowtail', cursive;
     font-size: 60px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.03134;
-  }
+}
+
+h1 {
+    text-align: center !important;
+    font-family: 'Yellowtail', cursive !important;
+    font-size: 42px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 1.09091 !important;
+}
+
+.uk-container uk-container-small {
+    text-align: center;
+}
+
+#button1 {
+    position: relative;
+    left: 375px;
+    font-family: 'Yellowtail', cursive !important;
+    font-size: 15px !important;
+}
+
+.footer {
+    text-align: center;
+}
