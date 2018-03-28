@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    let puppies = sequelize.define("puppies", {
+    let Puppies = sequelize.define("puppies", { 
       name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -30,6 +30,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.TEXT,
         allowNull: true
       }
+    }, {
+      timestamps: false
     });
-    return puppies;
-  };
+    return Puppies;
+};
