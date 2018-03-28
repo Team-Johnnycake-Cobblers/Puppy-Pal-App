@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    let postPuppies = sequelize.define("puppies", {
+    let postPuppies = sequelize.define("puppies_db", {
       name: {
         type: DataTypes.STRING,
         allowNull: false,
