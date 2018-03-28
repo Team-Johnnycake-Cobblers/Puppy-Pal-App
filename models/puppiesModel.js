@@ -7,10 +7,6 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      gender: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false
-      },
       breed: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -18,6 +14,11 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
+      gender: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+      },
+      
       age: {
         type: DataTypes.INTEGER,
         allowNull: false
