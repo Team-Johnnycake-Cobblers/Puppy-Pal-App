@@ -19,12 +19,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-// require("./routes/api_routes.js")(app);
+require("./routes/api_routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 
 db.sequelize.sync({ force: false }).then(function() {
-  // seed the database with puppies
+  // seed the database with puppies?
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

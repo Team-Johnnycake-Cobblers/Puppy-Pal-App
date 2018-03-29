@@ -1,3 +1,8 @@
+
+#sheltitle{
+    font-family: 'Raleway', sans-serif;
+}
+
 .uk-heading-hero {
     text-align: center;
     border-bottom: 10px;
@@ -32,3 +37,4 @@ h1 {
 .footer {
     text-align: center;
 }
+
