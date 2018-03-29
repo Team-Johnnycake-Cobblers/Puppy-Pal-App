@@ -38,3 +38,15 @@ h1 {
     text-align: center;
 }
 
+#slideshowContainer {
+    margin: 0 auto; 
+}
+
+#slideshowDiv {
+    top: -60px;
+}
+
+#overlay {
+    padding: 10px;
+}
+

@@ -1,16 +1,19 @@
- {{!-- TODO add margin: 0 auto; to slideshowContainer, 
- add top: -60px to slideshow div --}}
 <div class="uk-container-small" id="slideshowContainer">
     <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle uk-background-top-center"
         style="background-image: url(/img/banner-image.png);">
     </div>
 
-    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="min-height: 300; max-height: 500;">
+    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="min-height: 300; max-height: 500;" id="slideshowDiv">
 
         <ul class="uk-slideshow-items" id="slideshow"></ul>
 
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+    </div>
+</div>
+
+    <div class="footer">
+        Copyright 2018
     </div>
 </div>
 
