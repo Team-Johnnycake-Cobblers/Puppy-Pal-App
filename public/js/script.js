@@ -1,12 +1,14 @@
 // TEST SECTION FOR API REQUESTS - REMOVE ONCE FUNCTIONAL
-
+console.log('execute script!')
 $.get("/api/puppies", function(data) {
+    console.log(data);
     for (let i = 0; i < data.length; i ++) {
+         
+        let likeButton = $('<button>');
         let slides = $('<li>'); 
         let image = $('<img>'); 
         let nameDiv = $('<div>');
         let nameText = $('<h3>');  
-
 
         slides.addClass('photoSlides').appendTo($('#slideshow')); 
         image.attr('uk-cover', '').attr('src', data[i].image).addClass('slideshowPhotos').attr('max-height', '300px'); 
