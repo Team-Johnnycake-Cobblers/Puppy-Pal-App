@@ -1,8 +1,12 @@
-// TODO: Add functionality to like button
+var dataID = sessionStorage.getItem('key'); 
 
 $.get("/api/puppies", function (data) {
     addSlides(data);
+    $('.likeButton').on('click', function (evt) {
+        evt.preventDefault();
+        sessionStorage.setItem('key', (this.id)); 
     });
+})
 
 function addSlides(data) {
     for (let i = 0; i < data.length; i++) {
@@ -18,7 +22,20 @@ function addSlides(data) {
         nameDiv.appendTo(slides);
         nameText.addClass('uk-margin-remove').text(data[i].name);
         nameText.appendTo(nameDiv);
-        likeButton.addClass('likeButton uk-button uk-button-default').attr('id', data[i].id).attr('aria-hidden', 'false').attr('onclick', "location.href='../adopt';").text('Choose me!');
+        likeButton.addClass('likeButton uk-button uk-button-default').attr('id', data[i].id).attr('aria-hidden', 'false').text('Choose me!');
+        likeButton.attr('onclick', "location.href='../adopt';");
         likeButton.appendTo(nameDiv);
     }
+}
+
+$.get("/api/puppies/" + dataID, function(data) {
+    test(data); 
+    console.log(data);
+}) 
+
+function test(data) {
+    let heading = $('<h1>'); 
+    let photo = $('<img>'); 
+    heading.text(data.name).appendTo($('.profilePhoto')); 
+    photo.attr('src', data.image).css('width', '300px').attr('id', 'profileImageOnPage').appendTo($('.profilePhoto')); 
 }
