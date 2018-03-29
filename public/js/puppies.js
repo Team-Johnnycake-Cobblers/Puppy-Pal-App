@@ -29,13 +29,23 @@ function addSlides(data) {
 }
 
 $.get("/api/puppies/" + dataID, function(data) {
-    test(data); 
+    renderToPage(data); 
     console.log(data);
 }) 
 
-function test(data) {
-    let heading = $('<h1>'); 
+function renderToPage(data) {
+    let heading = $('<h2>'); 
     let photo = $('<img>'); 
-    heading.text(data.name).appendTo($('.profilePhoto')); 
-    photo.attr('src', data.image).css('width', '300px').attr('id', 'profileImageOnPage').appendTo($('.profilePhoto')); 
+    let gender = $('<p>');
+    let age = $('<p>');
+    let info = $('<p>');
+    let location = $('<p>');
+    heading.text('Name: ' + data.name).appendTo($('.profilePhoto')); 
+    photo.attr('src', data.image).css('width', '400px').attr('id', 'profileImageOnPage').appendTo($('.profilePhoto')); 
+    gender.text('Gender: ' + data.gender).appendTo($('.profilePhoto')); 
+    age.text('Age: ' + data.age).appendTo($('.profilePhoto')); 
+    if (data.info !== null) {
+    info.text('Additional Info: ' + data.info).appendTo($('.profilePhoto')); 
+    }
+    location.text('Shelter Location: ' + data.location).appendTo($('.profilePhoto')); 
 }

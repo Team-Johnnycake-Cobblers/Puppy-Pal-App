@@ -43,6 +43,7 @@
 
 #slideshowContainer {
     margin: 0 auto; 
+    text-align: center; 
 }
 
 #slideshowDiv {
@@ -51,4 +52,16 @@
 
 #overlay {
     padding: 10px;
+}
+
+.backButton {
+    margin: 10px auto; 
+    display: block; 
+    top: -50px;
+    position: relative;
+}
+
+.profilePhoto {
+    position: relative; 
+    top: -50px;
 }
