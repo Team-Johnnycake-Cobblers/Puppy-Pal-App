@@ -20,7 +20,7 @@ console.log('execute script!')
 //     }
 //       }); 
 
-$("#shelSubmit").on("click", function () {
+$("#shelForm").on("submit", function () {
     var newData =
         {
             name: $("#name").val().trim(),
@@ -30,8 +30,8 @@ $("#shelSubmit").on("click", function () {
             image: $("#imgURL").val().trim(),
             info: $("#info").val().trim()
         };
-    var currentURL = window.location.origin;
-    $.ajax({ url: currentURL + "/api/puppies", method: "POST" }).done(function (res) {
+    // var currentURL = window.location.origin;
+    $.ajax({ url: "/api/puppies", type: "POST", data: newData}).done(function (res) {
         console.log(res)
     });
 })
