@@ -33,5 +33,5 @@ $("#shelSubmit").on("click", function(){
     };
     var currentURL = window.location.origin;
 	$.post(currentURL + "/api/puppies", newData,
-					function (data) { });
+		function (data) { });
 })
