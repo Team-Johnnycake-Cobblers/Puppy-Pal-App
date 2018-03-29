@@ -1,6 +1,11 @@
 
 #sheltitle{
+    text-align: center !important;
     font-family: 'Raleway', sans-serif;
+    font-size: 42px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 1.09091 !important;
 }
 
 .uk-heading-hero {
@@ -30,11 +35,27 @@ h1 {
 #button1 {
     position: relative;
     left: 375px;
-    font-family: 'Yellowtail', cursive !important;
+    font-family: 'Raleway', sans-serif;
     font-size: 15px !important;
 }
 
 .footer {
     text-align: center;
+}
+
+.uk-navbar-container{
+   height: 40px;
+}
+
+#slideshowContainer {
+    margin: 0 auto; 
+}
+
+#slideshowDiv {
+    top: -60px;
+}
+
+#overlay {
+    padding: 10px;
 }
 
