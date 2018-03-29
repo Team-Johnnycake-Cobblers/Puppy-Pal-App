@@ -38,3 +38,11 @@ h1 {
     text-align: center;
 }
 
+#slideshowContainer {
+    margin: 0 auto; 
+}
+
+#slideshow {
+    top: -60px;
+}
+
