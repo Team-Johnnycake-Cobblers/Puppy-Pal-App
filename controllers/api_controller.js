@@ -6,7 +6,6 @@ module.exports = {
     findAllPuppies: function (req, res) {
         db.puppies.findAll({})
             .then(function (dbpuppies) {
-                console.log(dbpuppies); 
                 res.json(dbpuppies);
             });
     },
