@@ -1,9 +1,8 @@
-// TEST SECTION FOR API REQUESTS - REMOVE ONCE FUNCTIONAL
+// TODO: Add functionality to like button
 console.log('execute script!')
 $.get("/api/puppies", function(data) {
     console.log(data);
     for (let i = 0; i < data.length; i ++) {
-         
         let likeButton = $('<button>');
         let slides = $('<li>'); 
         let image = $('<img>'); 
@@ -17,6 +16,8 @@ $.get("/api/puppies", function(data) {
         nameDiv.appendTo(slides); 
         nameText.addClass('uk-margin-remove').text(data[i].name); 
         nameText.appendTo(nameDiv);  
+        likeButton.addClass('likeButton uk-button uk-button-default').attr('id', data[i].id).text('Choose me!'); 
+        likeButton.appendTo(nameDiv); 
     }
       }); 
 

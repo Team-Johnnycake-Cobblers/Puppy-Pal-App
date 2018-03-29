@@ -24,7 +24,6 @@ require("./routes/html-routes.js")(app);
 
 
 db.sequelize.sync({ force: false }).then(function() {
-  // seed the database with puppies?
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
