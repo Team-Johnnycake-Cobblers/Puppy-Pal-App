@@ -1,18 +1,24 @@
-<div class="uk-container uk-container-small">
 
+<div class="uk-container uk-container-small">
+<h1 id = "sheltitle">
+    Shelter 
+</h1>
+<hr>
+<p class= "uk-text-muted">Complete the form down below </p>
 <form class="uk-form-horizontal uk-margin-small">
 
     <div class="uk-width-1-2@s">
         <label class="uk-form-label" for="form-horizontal-text">Name</label>
         <div class="uk-form-controls">
-            <input class="uk-input" id="name" type="text" placeholder="Name">
+       <input class="uk-input" id="name" type="text" placeholder ="Name">
+
         </div>
     </div>
 
     <br>
 
     <div class="uk-width-1-2@s">
-        <label class="uk-form-label" for="form-horizontal-text">Breed</label>
+        <label class="uk-form-label" for="form-horizontal-text"><span uk-icon="icon: users"></span> Breed</label>
         <div class="uk-form-controls">
             <input class="uk-input" id="breed" type="text" placeholder="Breed">
         </div>
@@ -20,7 +26,7 @@
     <br>
 
     <div class="uk-width-1-2@s">
-        <label class="uk-form-label" for="form-horizontal-text">Age</label>
+        <label class="uk-form-label" for="form-horizontal-text"><span uk-icon="icon: hashtag"></span>Age</label>
         <div class="uk-form-controls">
             <input class="uk-input" id="age" type="text" placeholder="Age In Years">
         </div>
@@ -28,7 +34,7 @@
 
 
     <div class="uk-margin">
-        <div class="uk-form-label">Gender</div>
+        <div class="uk-form-label"><span uk-icon="icon: user"></span>Gender</div>
         <div class="uk-form-controls uk-form-controls-text" id="gender">
             <label><input class="uk-radio" type="radio" name="radio1"> Male</label><br>
             <label><input class="uk-radio" type="radio" name="radio1"> Female</label>
@@ -36,7 +42,7 @@
     </div>
 
     <div class="uk-margin">
-        <label class="uk-form-label" for="form-horizontal-text">Image URL</label>
+        <label class="uk-form-label" for="form-horizontal-text"><span uk-icon="icon: image"></span> Image URL</label>
         <div class="uk-form-controls">
             <input class="uk-input" id="imgURL" type="text" placeholder="Enter Image URL Here">
         </div>
@@ -47,7 +53,16 @@
         <textarea class="uk-textarea" id="info" rows="4" placeholder="Enter any additional information. (Medical needs, characteristcs, etc...)"></textarea>
         </div>
 
-    <button class=" uk-button uk-button-default" id="shelSubmit">Submit</button>
+    <button class=" uk-button uk-button-secondary" id="shelSubmit">Submit</button>
+    </form>
 
-</form>
+    <div class = "row">
+    <p class = "uk-position-bottom-center">
+        <a href="https://github.com/Team-Johnnycake-Cobblers" class="uk-icon-button" uk-icon="github"></a> |
+        <a href="/api/puppies" class = "uk-text-muted">API puppies List</a> 
+    </p>
+    </div>
 </div>
+<script>
+    
+</script>
