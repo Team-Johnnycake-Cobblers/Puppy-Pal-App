@@ -46,3 +46,16 @@ h1 {
 .uk-navbar-container{
    height: 40px;
 }
+
+#slideshowContainer {
+    margin: 0 auto; 
+}
+
+#slideshowDiv {
+    top: -60px;
+}
+
+#overlay {
+    padding: 10px;
+}
+
