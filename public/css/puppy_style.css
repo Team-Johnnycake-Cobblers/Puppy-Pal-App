@@ -8,18 +8,8 @@
     line-height: 1.09091 !important;
 }
 
-.uk-heading-hero {
-    text-align: center;
-    border-bottom: 10px;
-    visibility: visible;
-    font-family: 'Yellowtail', cursive;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.03134;
-}
 
-h1 {
+.puppy {
     text-align: center !important;
     font-family: 'Yellowtail', cursive !important;
     font-size: 42px !important;
@@ -32,9 +22,14 @@ h1 {
     text-align: center;
 }
 
+.uk-height-large {
+    height: 261px !Important;
+}
+
 #button1 {
     position: relative;
-    left: 375px;
+    display: block;
+    margin: 0 auto; 
     font-family: 'Raleway', sans-serif;
     font-size: 15px !important;
 }
@@ -49,13 +44,25 @@ h1 {
 
 #slideshowContainer {
     margin: 0 auto; 
+    text-align: center; 
 }
 
 #slideshowDiv {
-    top: -60px;
+    top: -90px;
 }
 
 #overlay {
     padding: 10px;
 }
 
+.backButton {
+    margin: 10px auto; 
+    display: block; 
+    top: -50px;
+    position: relative;
+}
+
+.profilePhoto {
+    position: relative; 
+    top: -50px;
+}
