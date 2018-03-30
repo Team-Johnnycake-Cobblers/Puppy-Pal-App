@@ -1,14 +1,25 @@
-$("#shelSubmit").on("click", function(){
-    var newData = 
-    {
-        name: $("#name").val().trim(),
-        breed: $("#breed").val().trim(),
-        age: $("#age").val().trim(),
-        gender: $("#gender").val().trim(),
-        image: $("#imgURL").val().trim(),
-        info: $("#info").val().trim()
-    };
-    var currentURL = window.location.origin;
-	$.post(currentURL + "/api/puppies", newData,
-		function (data) { });
-})
+$(document).ready(function () {
+    if (window.location.pathname === "/shelter") {
+        $("#shelForm").on("submit", function () {
+            let newData =
+            {
+                name: $("#name").val().trim(),
+                breed: $("#breed").val().trim(),
+                gender: $("#gender").val().trim(),
+                age: $("#age").val().trim(),
+                info: $("#info").val().trim(),
+                location: $("#location").val().trim(), 
+                image: $("#image").val().trim()
+                
+            };
+            $.ajax({
+                type: "POST", 
+                url: "api/puppies", 
+                data: newData
+            });
+            alert("Your form was submitted succesfully")
+
+        }); 
+        
+    }
+}); 
