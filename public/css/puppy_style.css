@@ -28,7 +28,8 @@
 
 #button1 {
     position: relative;
-    left: 375px;
+    display: block;
+    margin: 0 auto; 
     font-family: 'Raleway', sans-serif;
     font-size: 15px !important;
 }
@@ -47,7 +48,7 @@
 }
 
 #slideshowDiv {
-    top: -60px;
+    top: -90px;
 }
 
 #overlay {
