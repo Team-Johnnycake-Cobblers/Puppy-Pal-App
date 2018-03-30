@@ -29,13 +29,26 @@ function addSlides(data) {
 }
 
 $.get("/api/puppies/" + dataID, function(data) {
-    test(data); 
+    renderToPage(data); 
     console.log(data);
 }) 
 
-function test(data) {
-    let heading = $('<h1>'); 
+function renderToPage(data) {
+    let heading = $('<h2>').addClass('aboutHeading'); 
     let photo = $('<img>'); 
-    heading.text(data.name).appendTo($('.profilePhoto')); 
-    photo.attr('src', data.image).css('width', '300px').attr('id', 'profileImageOnPage').appendTo($('.profilePhoto')); 
+    let gender = $('<p>').addClass('aboutText');
+    let breed = $('<p>').addClass('aboutText'); 
+    let age = $('<p>').addClass('aboutText');
+    let info = $('<p>').addClass('aboutText');
+    let location = $('<p>').addClass('aboutText');
+    heading.text('Name: ' + data.name).appendTo($('.nameAndPhotoDiv')); 
+    photo.attr('src', data.image).addClass('dogPhoto').attr('id', 'profileImageOnPage').appendTo($('.nameAndPhotoDiv')); 
+    gender.text('Gender: ' + data.gender).appendTo($('.nameAndPhotoDiv')); 
+    breed.text('Breed: ' + data.breed).appendTo($('.nameAndPhotoDiv'));
+    age.text('Age: ' + data.age).appendTo($('.nameAndPhotoDiv')); 
+    if (data.info !== null) {
+    info.text('Additional Info: ' + data.info).appendTo($('.nameAndPhotoDiv')); 
+    }
+    location.text('Shelter Location: ' + data.location).appendTo($('.nameAndPhotoDiv')); 
 }
+

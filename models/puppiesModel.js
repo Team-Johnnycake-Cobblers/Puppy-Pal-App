@@ -27,6 +27,10 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.TEXT,
         allowNull: true
       },
+      location: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      }, 
       image: {
         type: DataTypes.TEXT,
         allowNull: true
