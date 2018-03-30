@@ -37,12 +37,14 @@ function renderToPage(data) {
     let heading = $('<h2>'); 
     let photo = $('<img>'); 
     let gender = $('<p>');
+    let breed = $('<p>'); 
     let age = $('<p>');
     let info = $('<p>');
     let location = $('<p>');
     heading.text('Name: ' + data.name).appendTo($('.profilePhoto')); 
     photo.attr('src', data.image).css('width', '400px').attr('id', 'profileImageOnPage').appendTo($('.profilePhoto')); 
     gender.text('Gender: ' + data.gender).appendTo($('.profilePhoto')); 
+    breed.text('Breed: ' + data.breed).appendTo($('.profilePhoto'));
     age.text('Age: ' + data.age).appendTo($('.profilePhoto')); 
     if (data.info !== null) {
     info.text('Additional Info: ' + data.info).appendTo($('.profilePhoto')); 
