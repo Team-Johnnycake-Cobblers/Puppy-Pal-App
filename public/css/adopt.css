@@ -1,13 +1,13 @@
 img#profileImageOnPage.dogPhoto {
-    max-width: 600px;
+    max-width: 400px;
     padding:1px;
     border:1px solid #021a40;
     background-color:rgb(0, 123, 255); 
 }
 
-.nameAndPhotoDiv {
+#aboutDiv {
     position: relative; 
-    top: -95px;
+    top: -80px;
 }
 
 .aboutHeading {
@@ -15,5 +15,5 @@ img#profileImageOnPage.dogPhoto {
 }
 
 .aboutText {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }

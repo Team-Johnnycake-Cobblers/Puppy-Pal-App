@@ -41,14 +41,14 @@ function renderToPage(data) {
     let age = $('<p>').addClass('aboutText');
     let info = $('<p>').addClass('aboutText');
     let location = $('<p>').addClass('aboutText');
-    heading.text('Name: ' + data.name).appendTo($('.nameAndPhotoDiv')); 
-    photo.attr('src', data.image).addClass('dogPhoto').attr('id', 'profileImageOnPage').appendTo($('.nameAndPhotoDiv')); 
-    gender.text('Gender: ' + data.gender).appendTo($('.nameAndPhotoDiv')); 
-    breed.text('Breed: ' + data.breed).appendTo($('.nameAndPhotoDiv'));
-    age.text('Age: ' + data.age).appendTo($('.nameAndPhotoDiv')); 
+    heading.text(data.name).appendTo($('#cardOne')); 
+    photo.attr('src', data.image).addClass('dogPhoto').attr('id', 'profileImageOnPage').appendTo($('#cardOne')); 
+    gender.text('Gender: ' + data.gender).appendTo($('#cardTwo')); 
+    breed.text('Breed: ' + data.breed).appendTo($('#cardTwo'));
+    age.text('Age: ' + data.age).appendTo($('#cardTwo')); 
     if (data.info !== null) {
-    info.text('Additional Info: ' + data.info).appendTo($('.nameAndPhotoDiv')); 
+    info.text('Additional Info: ' + data.info).appendTo($('#cardTwo')); 
     }
-    location.text('Shelter Location: ' + data.location).appendTo($('.nameAndPhotoDiv')); 
+    location.text('Shelter Location: ' + data.location).appendTo($('#cardTwo')); 
 }
 
