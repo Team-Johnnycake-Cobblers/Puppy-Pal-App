@@ -4,7 +4,7 @@
     <div class="uk-navbar-right">
          <ul class="uk-navbar-nav">
             <li class="uk-active"><a href="/">Home</a></li>
-            <li class="uk-active"><a href="/puppies">Search Again</a></li>
+            <li class="uk-active"><a href="/puppies">Search</a></li>
             <li><a href=""></a></li>
         </ul>
     </div>
@@ -12,7 +12,7 @@
 <hr>
 <p class= "uk-text-muted">Complete the form down below to add a dog into our catalog</p>
 
-<form class="uk-form-horizontal uk-margin-small">
+<form class="uk-form-horizontal uk-margin-small" id="shelForm">
 
     <div class="uk-width-1-2@s">
         <label class="uk-form-label" for="form-horizontal-text"><span uk-icon="icon: search"></span>Name</label>
@@ -42,9 +42,8 @@
 
     <div class="uk-margin">
         <div class="uk-form-label"><span uk-icon="icon: user"></span>Gender</div>
-        <div class="uk-form-controls uk-form-controls-text" id="gender">
-            <label><input class="uk-radio" type="radio" name="radio1"> Male</label><br>
-            <label><input class="uk-radio" type="radio" name="radio1"> Female</label>
+             <div class="uk-form-controls">
+            <input class="uk-input" id="gender" type="text" placeholder="Male/Female">
         </div>
     </div>
 
