@@ -24,7 +24,7 @@ $(document).ready(function() {
             let nameDiv = $('<div>');
             let nameText = $('<h3>');
             slides.addClass('photoSlides').appendTo($('#slideshow'));
-            image.attr('uk-cover', '').attr('src', data[i].image).addClass('slideshowPhotos');
+            image.attr('src', data[i].image).addClass('slideshowPhotos');
             image.appendTo(slides);
             nameDiv.addClass('uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom').attr('id', 'overlay');
             nameDiv.appendTo(slides);
@@ -46,13 +46,13 @@ $(document).ready(function() {
         let location = $('<p>').addClass('aboutText');
         heading.text(data.name).appendTo($('#cardOne')); 
         photo.attr('src', data.image).addClass('dogPhoto').attr('id', 'profileImageOnPage').appendTo($('#cardOne')); 
-        gender.text('Gender: ' + data.gender).appendTo($('#cardTwo')); 
-        breed.text('Breed: ' + data.breed).appendTo($('#cardTwo'));
-        age.text('Age: ' + data.age).appendTo($('#cardTwo')); 
+        gender.text('Gender: ' + data.gender).appendTo($('#cardOne')); 
+        breed.text('Breed: ' + data.breed).appendTo($('#cardOne'));
+        age.text('Age: ' + data.age).appendTo($('#cardOne')); 
         if (data.info !== null) {
-        info.text('Additional Info: ' + data.info).appendTo($('#cardTwo')); 
+        info.text('Additional Info: ' + data.info).appendTo($('#cardOne')); 
         }
-        location.text('Shelter Location: ' + data.location).appendTo($('#cardTwo'));  
+        location.text('Shelter: ' + data.location).appendTo($('#cardOne'));  
     }
 
 
