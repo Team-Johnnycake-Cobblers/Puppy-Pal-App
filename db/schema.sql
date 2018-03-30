@@ -9,6 +9,7 @@ CREATE TABLE puppies
     gender varchar(255) NOT NULL,
     age int(2) NOT NULL,
     info varchar(300),
+    location varchar(300),
     image varchar(300) NOT NULL,
 	PRIMARY KEY (id)
 );

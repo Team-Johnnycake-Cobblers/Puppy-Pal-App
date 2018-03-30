@@ -8,18 +8,8 @@
     line-height: 1.09091 !important;
 }
 
-.uk-heading-hero {
-    text-align: center;
-    border-bottom: 10px;
-    visibility: visible;
-    font-family: 'Yellowtail', cursive;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.03134;
-}
 
-h1 {
+.puppy {
     text-align: center !important;
     font-family: 'Yellowtail', cursive !important;
     font-size: 42px !important;
@@ -30,6 +20,10 @@ h1 {
 
 .uk-container uk-container-small {
     text-align: center;
+}
+
+.uk-height-large {
+    height: 261px !Important;
 }
 
 #button1 {
@@ -58,4 +52,3 @@ h1 {
 #overlay {
     padding: 10px;
 }
-
