@@ -27,6 +27,7 @@ module.exports = {
             breed: req.body.breed,
             age: req.body.age, 
             info: req.body.info, 
+            location: req.body.location, 
             image: req.body.photo_link
         })
             .then(function (dbpuppies) {
