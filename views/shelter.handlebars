@@ -1,5 +1,5 @@
 <div class="uk-container uk-container-small">
-    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar id="shelterNavBar">
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
                 <li class="uk-active">
@@ -39,6 +39,14 @@
         </div>
         <br>
 
+        <div class="uk-margin">
+            <div class="uk-form-label">
+                <span uk-icon="icon: user"></span>Gender</div>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="gender" type="text" placeholder="Male/Female">
+            </div>
+        </div>
+
         <div class="uk-width-1-2@s">
             <label class="uk-form-label" for="form-horizontal-text">
                 <span uk-icon="icon: hashtag"></span>Age</label>
@@ -47,12 +55,11 @@
             </div>
         </div>
 
-        <br>
-        <div class="uk-width-1-2@s">
+        <div class="uk-margin">
             <div class="uk-form-label">
-                <span uk-icon="icon: user"></span>Gender</div>
+                <span uk-icon="icon: location"></span>Location</div>
             <div class="uk-form-controls">
-                <input class="uk-input" id="gender" type="text" placeholder="Male/Female">
+                <input class="uk-input" id="location" type="text" placeholder="Shelter Name">
             </div>
         </div>
 
@@ -60,33 +67,19 @@
             <label class="uk-form-label" for="form-horizontal-text">
                 <span uk-icon="icon: image"></span> Image URL</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="imgURL" type="text" placeholder="Enter Image URL Here">
-            </div>
-        </div>
-
-
-        <div class="uk-margin">
-            <label class="uk-form-label" for="form-horizontal-text">
-                <span uk-icon="icon: hashtag"></span>Location</label>
-            <div class="uk-form-controls">
-                <input class="uk-input" id="location" type="text" placeholder="Shelter Address">
+                <input class="uk-input" id="image" type="text" placeholder="Enter Image URL Here">
             </div>
         </div>
 
         <div class="uk-margin">
-            <textarea class="uk-textarea" id="info" rows="4" placeholder="Enter any additional information. (Medical needs, characteristcs, etc...)"></textarea>
+            <textarea class="uk-textarea" id="info" rows="4" placeholder="Enter any additional information. (Medical needs, characteristics, etc...)"></textarea>
         </div>
 
         <button class=" uk-button uk-button-secondary" id="shelSubmit">Submit</button>
     </form>
-
-    <div class="row">
-        <p class="uk-position-bottom-center">
-            <a href="https://github.com/Team-Johnnycake-Cobblers" class="uk-icon-button" uk-icon="github"></a> |
-            <a href="/api/puppies" class="uk-text-muted">API puppies List</a>
-        </p>
-    </div>
+    <br>
+<footer>
+    <a href="https://github.com/Team-Johnnycake-Cobblers" class="uk-icon-button" uk-icon="github"></a> |
+    <a href="/api/puppies" class="uk-text-muted">API puppies List</a>
+</footer>
 </div>
-<script>
-
-</script>

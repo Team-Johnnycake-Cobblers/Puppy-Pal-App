@@ -1,29 +1,22 @@
-
-#sheltitle{
-    text-align: center !important;
-    font-family: 'Raleway', sans-serif;
-    font-size: 42px !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    line-height: 1.09091 !important;
+#sheltitle, 
+.puppy {
+    text-align: center;   
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.09091;
 }
 
+#sheltitle {
+    font-family: 'Raleway', sans-serif;
+}
 
 .puppy {
-    text-align: center !important;
     font-family: 'Yellowtail', cursive !important;
-    font-size: 42px !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    line-height: 1.09091 !important;
 }
 
-.uk-container uk-container-small {
-    text-align: center;
-}
-
-.uk-height-large {
-    height: 261px !Important;
+.uk-background-cover {
+    max-height: 215px;
 }
 
 #button1 {
@@ -34,21 +27,18 @@
     font-size: 15px !important;
 }
 
-.footer {
+footer {
     text-align: center;
+    font-size: small; 
 }
 
-.uk-navbar-container{
+#shelterNavBar {
    height: 40px;
 }
 
 #slideshowContainer {
     margin: 0 auto; 
     text-align: center; 
-}
-
-#slideshowDiv {
-    top: -90px;
 }
 
 #overlay {
@@ -58,11 +48,20 @@
 .backButton {
     margin: 10px auto; 
     display: block; 
-    top: -50px;
-    position: relative;
 }
 
-.profilePhoto {
-    position: relative; 
-    top: -50px;
+#profileImageOnPage {
+    width: 35vw;
+    padding:1px;
+    border:1px solid #021a40;
+    background-color:rgb(0, 123, 255); 
+}
+
+.aboutHeading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25rem;
+}
+
+.aboutText {
+    font-size: 1.10rem;
 }
