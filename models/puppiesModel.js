@@ -18,7 +18,6 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BOOLEAN,
         allowNull: false
       },
-      
       age: {
         type: DataTypes.INTEGER,
         allowNull: false

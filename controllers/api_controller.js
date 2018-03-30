@@ -27,7 +27,8 @@ module.exports = {
             breed: req.body.breed,
             age: req.body.age, 
             info: req.body.info, 
-            image: req.body.photo_link
+            image: req.body.photo_link,
+            location: req.body.location
         })
             .then(function (dbpuppies) {
                 res.json(dbpuppies);

@@ -28,9 +28,11 @@ $("#shelForm").on("submit", function () {
             age: $("#age").val().trim(),
             gender: $("#gender").val().trim(),
             image: $("#imgURL").val().trim(),
-            info: $("#info").val().trim()
+            info: $("#info").val().trim(),
+            location: $("#location").val().trim()
         };
     // var currentURL = window.location.origin;
+    console.log(newData)
     $.ajax({ url: "/api/puppies", type: "POST", data: newData}).done(function (res) {
         console.log(res)
     });
