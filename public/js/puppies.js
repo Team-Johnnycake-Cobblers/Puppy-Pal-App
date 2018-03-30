@@ -51,3 +51,4 @@ function renderToPage(data) {
     }
     location.text('Shelter Location: ' + data.location).appendTo($('.profilePhoto')); 
 }
+
