@@ -16,7 +16,10 @@ $(document).ready(function () {
                 type: "POST", 
                 url: "api/puppies", 
                 data: newData
-            })
+            });
+            alert("Your form was submitted succesfully")
+
         }); 
+        
     }
 }); 
