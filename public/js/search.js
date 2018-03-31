@@ -60,7 +60,7 @@ function searchAndDelete(data) {
 
     searchDiv.appendTo($('#searchResults'));
     searchCard.appendTo(searchDiv);
-    searchData.html('Name: ' + data.name + '<br> ' + 'ID: ' + data.id + '<br>').appendTo(searchCard);
+    searchData.html('Name: ' + data.name + '<br> ' + 'ID: ' + data.id + '<br>' + data.location).appendTo(searchCard);
     searchPhoto.attr('src', data.image).appendTo(searchCard); 
     deleteButton.appendTo(searchCard);
 
@@ -68,9 +68,16 @@ function searchAndDelete(data) {
         evt.preventDefault(); 
         console.log('delete'); 
         let deleteId = sessionStorage.getItem('deleteId'); 
+        
         $.ajax({
-            url: '/api/puppies/' + deleteId,
-            type: 'DELETE'
-        });
-    })
+            method: "delete",
+            url: "/api/delete/" + deleteId
+        })
+        .then(
+            function(delData) {
+              console.log(delData);
+              window.location.replace("http://localhost:3000/search");
+            }
+          );
+    });
 }
