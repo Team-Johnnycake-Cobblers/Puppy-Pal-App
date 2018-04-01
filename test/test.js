@@ -2,7 +2,6 @@ const Nightmare = require('nightmare')
 const assert = require('assert')
 
 describe('Load a Page', function () {
-  // Recommended: 5s locally, 10s to remote server, 30s from airplane ¯\_(ツ)_/¯
   this.timeout('30s')
 
   let nightmare = null
@@ -62,47 +61,61 @@ describe('User pages', function () {
     it('should work without timing out', done => {
       nightmare
         .goto('http://localhost:3000/')
-        .wait(2000)
+        .wait(3000)
         .click('#button1')
-        .wait(1000)
+        .wait(2000)
         .click('#next')
-        .wait(1000)
+        .wait(2000)
         .click('#next')
-        .wait(1000)
+        .wait(2000)
+        .click('#next')
+        .wait(2000)
+        .click('#next')
+        .wait(2000)
+        .click('#next')
+        .wait(2000)
+        .click('#next')
+        .wait(2000)
         .click('#previous')
-        .wait(1000)
-        .click('button')
-        .wait(1000)
+        .wait(2000)
+        .click('#previous')
+        .wait(2000)
+        nightmare.evaluate(() => {
+          $('button[id="5"]').click();
+        })
+        .wait(2000)
         .scrollTo(100, 50)
         .wait(2000)
-        .end()
-        .then(result => { done() })
-        .catch(done)
-    })
-  })
-})
-
-describe('User pages', function () {
-  this.timeout('60s')
-
-  let nightmare = null
-  nightmare = new Nightmare({ show: true })
-
-  describe('shelter page', () => {
-    it('should work without timing out', done => {
-      nightmare
-        .goto('http://localhost:3000/')
+        .click('#homeButton')
         .wait(2000)
         .click('.goToShelter')
         .wait(2000)
-      
-        // TODO write code to submit form
-      
+        .type('#name', 'Mr. Floof')
+        .type('#breed', 'Chocolate Lab')
+        .type('#gender', 'Male')
+        .type('#age', '4')
+        .type('#location', 'ABC Shelter')
+        .type('#image', 'https://images.pexels.com/photos/298062/pexels-photo-298062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+        .type('#info', 'Loves to drool!')
+        .wait(2000)
+        .click('#shelSubmit')
+        .wait(2000)
+        .click('#gallery')
+        .wait(2000)
+        .click('#previous')
+        .wait(2000)
+        .click('.goToShelter')
+        .wait(2000)
+        .click('#search')
+        .wait(2000)
+        .type('#idNumber', '7')
+        .click('#searchSubmit')
+        .wait(2000)
+        .click('#deleteButton')
+        .wait(2000)
         .end()
         .then(result => { done() })
         .catch(done)
     })
   })
 })
-
-// TODO write code to delete entered form data

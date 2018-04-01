@@ -18,7 +18,6 @@ $(document).ready(function () {
     }
 });
 
-
 function insertParam(key, value) {
     key = encodeURI(key); value = encodeURI(value);
 
@@ -75,8 +74,16 @@ function searchAndDelete(data) {
         })
         .then(
             function(delData) {
-              alert('The dog has been removed from our database')
-              window.location.replace("http://localhost:3000/search");
+                let deleted = $('<div>').addClass('uk-alert-success').attr('uk-alert', '').attr('id', 'deletedDiv');
+                deleted.appendTo($('#alertHere'));
+                let anchor = $('<a>').addClass('uk-alert-close').attr('uk-close', '');
+                anchor.appendTo(deleted);
+                let successMessage = $('<p>').text("Your dog has been deleted");
+                $('#searchResults').hide();
+                successMessage.appendTo(deleted);
+                setTimeout(function () {
+                    window.location.href = "http://localhost:3000/search";
+                 }, 3000);
             }
           );
     });
