@@ -7,15 +7,16 @@
                     <a href="/">Home</a>
                 </li>
                 <li class="uk-active">
-                    <a href="/puppies">Search</a>
+                    <a href="/puppies" id="gallery">Gallery</a>
                 </li>
-                <li>
-                    <a href=""></a>
+                <li class="uk-active">
+                    <a href="/search" id="search">Search</a>
                 </li>
             </ul>
         </div>
     </nav>
     <hr>
+    <div id="alertGoesHere"></div>
     <p class="uk-text-muted">Complete the form down below to add a dog into our catalog</p>
 
     <form class="uk-form-horizontal uk-margin-small" id="shelForm">
@@ -33,7 +34,7 @@
 
         <div class="uk-width-1-2@s">
             <label class="uk-form-label" for="form-horizontal-text">
-                <span uk-icon="icon: users"></span> Breed</label>
+                <span uk-icon="icon: users"></span>Breed</label>
             <div class="uk-form-controls">
                 <input class="uk-input" id="breed" type="text" placeholder="Breed">
             </div>
@@ -66,7 +67,7 @@
 
         <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-text">
-                <span uk-icon="icon: image"></span> Image URL</label>
+                <span uk-icon="icon: image"></span>Image URL</label>
             <div class="uk-form-controls">
                 <input class="uk-input" id="image" type="text" placeholder="Enter Image URL Here">
             </div>
@@ -82,6 +83,6 @@
 
 <footer>
     <a href="https://github.com/Team-Johnnycake-Cobblers" class="uk-icon-button" uk-icon="github"></a> |
-    <a href="/api/puppies" class="uk-text-muted">API puppies List</a>
+    <a href="/api/puppies" class="uk-text-muted getApiList">API Puppies List</a>
 </footer>
 </div>

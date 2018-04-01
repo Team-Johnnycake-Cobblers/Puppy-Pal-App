@@ -10,5 +10,5 @@ module.exports = function(app) {
 
   app.put("/api/puppies", apiController.changePuppy);
 
-  app.delete("api/puppies/:id", apiController.deletePuppy); 
+  app.delete("/api/delete/:id", apiController.deletePuppy); 
 };

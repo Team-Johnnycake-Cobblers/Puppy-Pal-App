@@ -1,4 +1,4 @@
-var dataID = sessionStorage.getItem('key'); 
+const dataID = sessionStorage.getItem('key'); 
 $(document).ready(function() {
     if(window.location.pathname ==="/puppies"){
         $.get("/api/puppies", function (data) {

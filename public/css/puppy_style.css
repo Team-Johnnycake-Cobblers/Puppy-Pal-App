@@ -69,3 +69,18 @@ footer {
     width: 80px;
     height: 60px;
 }
+
+#searchCard {
+    margin: 0 auto; 
+    display: block; 
+    width: 50vw; 
+}
+
+#searchImage {
+    margin: 20px; 
+}
+
+#homeButton {
+    margin: 10px;
+}
+
