@@ -5,6 +5,9 @@ var nightmare = Nightmare({ show: true });
 var page = nightmare
 .goto("https://localhost:3000/")
   .click("#button1")
+  .wait('#slideshowDiv')
+  .click("#slideRight")
+  .exists(".uk-text-muted")
 // add more tests here, but just testing the button for now
   .end()
   .then(function(result) {
