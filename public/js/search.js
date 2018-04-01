@@ -75,7 +75,7 @@ function searchAndDelete(data) {
         })
         .then(
             function(delData) {
-              console.log(delData);
+              alert('The dog has been removed from our database')
               window.location.replace("http://localhost:3000/search");
             }
           );

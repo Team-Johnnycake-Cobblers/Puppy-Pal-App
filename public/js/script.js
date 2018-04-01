@@ -16,9 +16,9 @@ $(document).ready(function () {
                 type: "POST", 
                 url: "api/puppies", 
                 data: newData
-            });
-            alert("Your form was submitted succesfully")
-
+            }).then(function(data) {
+                alert("Your dog's ID number is " + data.id + ". Please make sure to save this id number for future reference.");
+            })
         }); 
         
     }
