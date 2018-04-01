@@ -80,16 +80,21 @@ describe('User pages', function () {
         .wait(2000)
         .click('#previous')
         .wait(2000)
-        nightmare.evaluate(() => {
-          $('button[id="5"]').click();
-        })
-        .wait(2000)
-        .scrollTo(100, 50)
+      nightmare.evaluate(() => {
+        $('button[id="5"]').click();
+      })
         .wait(2000)
         .click('#homeButton')
         .wait(2000)
         .click('.goToShelter')
         .wait(2000)
+        .then(result => { done() })
+        .catch(done)
+    })
+  })
+  describe('enter dog', () => {
+    it('should load without error', done => {
+      nightmare.goto('http://localhost:3000/shelter')
         .type('#name', 'Mr. Floof')
         .type('#breed', 'Chocolate Lab')
         .type('#gender', 'Male')
@@ -100,6 +105,13 @@ describe('User pages', function () {
         .wait(2000)
         .click('#shelSubmit')
         .wait(2000)
+        .then(function (result) { done() })
+        .catch(done)
+    })
+  })
+  describe('view new dog', () => {
+    it('should load without error', done => {
+      nightmare.goto('http://localhost:3000/shelter')
         .click('#gallery')
         .wait(2000)
         .click('#previous')
@@ -108,14 +120,22 @@ describe('User pages', function () {
         .wait(2000)
         .click('#search')
         .wait(2000)
+        .then(function (result) { done() })
+        .catch(done)
+    })
+  })
+  describe('delete dog', () => {
+    it('should load without error', done => {
+      nightmare.goto('http://localhost:3000/search')
         .type('#idNumber', '7')
         .click('#searchSubmit')
         .wait(2000)
         .click('#deleteButton')
-        .wait(2000)
+        .wait(3000)
         .end()
-        .then(result => { done() })
+        .then(function (result) { done() })
         .catch(done)
     })
   })
 })
+
