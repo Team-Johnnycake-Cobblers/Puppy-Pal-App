@@ -1,4 +1,4 @@
-# Puppy-Pal-app
+# Puppy-Pal-App
 
 ## Description
 
