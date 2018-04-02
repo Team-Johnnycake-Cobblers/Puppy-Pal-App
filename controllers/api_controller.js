@@ -1,5 +1,3 @@
-// TODO set up routing to back end
-
 const db = require("../models");
 
 module.exports = {    
