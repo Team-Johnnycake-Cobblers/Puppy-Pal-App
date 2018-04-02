@@ -18,7 +18,6 @@ $(document).ready(function () {
                     url: "api/puppies",
                     data: newData
                 }).then(function (data) {
-                    console.log(data); 
                     successMessage(data); 
                 });
         });

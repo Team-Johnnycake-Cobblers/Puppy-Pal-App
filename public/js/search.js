@@ -11,7 +11,6 @@ $(document).ready(function () {
         let puppyId = findGetParameter('puppies');
         if (puppyId !== null) {
             $.get("/api/puppies/" + puppyId, function (data) {
-                console.log(data);
                 searchAndDelete(data);
             });
         }
@@ -65,7 +64,6 @@ function searchAndDelete(data) {
 
     $('#deleteButton').on('click', function(evt) {
         evt.preventDefault(); 
-        console.log('delete'); 
         let deleteId = sessionStorage.getItem('deleteId'); 
         
         $.ajax({
